@@ -1,0 +1,28 @@
+CREATE TABLE Sporting_Goods (id INTEGER PRIMARY KEY, Name TEXT, In_Stock TEXT, Department TEXT, Price INTEGER);
+
+INSERT into Sporting_Goods VALUES
+(1, "Baseballs", 27, "Baseball", 7.00),
+(2, "Gloves", 157, "Baseball", 65.00),
+(3, "Cleats", 34, "Soccer", 129.00),
+(4, "Sneakers", 73, "Basketball", 150.00),
+(5, "Basketballs", 13 , "Basketball", 24.99),
+(6, "Mouth Guard", 15, "Football", 9.99),
+(7, "Hats", 42, "Baseball", 25.00),
+(8, "Drivers", 14, "Golf", 100.00),
+(9, "Soccer Balls", 8 , "Soccer", 39.99),
+(10, "Goalie Gloves", 7, "Soccer", 25.00),
+(11, "Bats", 27, "Baseball", 74.99),
+(12, "Shinguards", 11, "Soccer", 15.00),
+(13, "Shoulder Pads", 7, "Football", 75.00),
+(14, "Footballs", 8, "Football", 24.99),
+(15, "Eye Black", 4, "Baseball", 7.99);
+
+--Display the database ordered by price.
+SELECT * FROM Sporting_Goods ORDER BY price;
+
+--What is the average price of an item in the baseball department?
+SELECT AVG(Price) FROM Sporting_Goods 
+WHERE Department="Baseball";
+
+--What is the sum price of each item in the store? (not counting the extra stock of each item)
+SELECT SUM(Price) FROM Sporting_Goods;
